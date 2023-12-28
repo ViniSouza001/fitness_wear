@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  align-items: center;
+}
+
+header .logo {
+  width: 120px;
+  height: 120px;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+header div select {
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 20px;
+  background-color: #0e503c;
+  cursor: pointer;
+  color: #fff;
+}
+
+header .search {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

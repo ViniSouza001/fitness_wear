@@ -1,0 +1,27 @@
+[
+   {
+      "name": "Clothe1",
+      "type": "clothe",
+      "size": "P, M, G",
+      "category": ["Tops"],
+      "description": "Just examples",
+      "imageURL":"http://placehold.it/350x250",
+      "price": 49.99
+   },
+   {
+      "name": "Shirt2",
+      "category": ["Tops", "Shorts"],
+      "size": "M, L",
+      "description": "It's the 2dn example",
+      "imageURL" :"http://placehold.it/350x250",
+      "price": 50.00
+   }, 
+   {
+      "name": "Trouser3",
+      "category": ["T-shirts"],
+      "sizes": "P, M",
+      "description": "It's the 3th example",
+      "imageURL": "http://placehold.it/350x250",
+      "price": 49.99
+   }
+]
