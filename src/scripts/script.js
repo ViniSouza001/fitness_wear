@@ -9,4 +9,4 @@ const takeData = async () => {
   return data;
 };
 
-// takeData();
+takeData();
