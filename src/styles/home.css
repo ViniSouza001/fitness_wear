@@ -1,7 +1,12 @@
+@font-face {
+  font-family: "Julius Sans One";
+  src: url("../../assets/fonts/JuliusSansOne-Regular.ttf");
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Julius Sans One";
 }
 
 header {
@@ -23,17 +28,44 @@ header div {
   gap: 20px;
 }
 
-header div select {
+header select {
   border-radius: 10px;
   padding: 5px;
   font-size: 20px;
   background-color: #0e503c;
   cursor: pointer;
   color: #fff;
+  font-weight: bold;
+}
+
+header select option {
+  font-weight: bold;
 }
 
 header .search {
+  width: 300px;
+  padding: 20px 10px;
+  border-radius: 1000px;
+  background-color: #e7e7e7;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .search input {
+  font-size: 16px;
+  background-color: #e7e7e7;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+.searchIcon {
   width: 20px;
-  height: 20px;
   cursor: pointer;
+  margin-right: 10px;
+}
+
+.images {
+  width: 350px;
+  border-radius: 120px;
 }

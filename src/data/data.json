@@ -1,27 +1,42 @@
 [
    {
       "name": "Clothe1",
-      "type": "clothe",
       "size": "P, M, G",
-      "category": ["Tops"],
+      "category": "Tops",
       "description": "Just examples",
-      "imageURL":"http://placehold.it/350x250",
+      "imageURL":"../../assets/pictures/cropped.png",
       "price": 49.99
    },
    {
       "name": "Shirt2",
-      "category": ["Tops", "Shorts"],
+      "category": "Tops",
       "size": "M, L",
       "description": "It's the 2dn example",
       "imageURL" :"http://placehold.it/350x250",
       "price": 50.00
    }, 
    {
+      "name": "Top 1",
+      "category": "Tops",
+      "size": "M",
+      "description": "It's the 2dn example",
+      "imageURL" :"http://placehold.it/350x250",
+      "price": 50.00
+   }, 
+   {
       "name": "Trouser3",
-      "category": ["T-shirts"],
+      "category": "T-shirts",
       "sizes": "P, M",
       "description": "It's the 3th example",
       "imageURL": "http://placehold.it/350x250",
       "price": 49.99
+   },
+   {
+      "name": "Yellow shorts",
+      "category": "Shorts",
+      "sizes": "M",
+      "description": "They are yellow!",
+      "imageURL": "http://placehold.it/350x250",
+      "price": 7.99
    }
 ]
