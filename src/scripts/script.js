@@ -1,7 +1,8 @@
 const stripe = Stripe(
   "pk_live_51OS4DvEixHlr2hL8LrnLan29l69T9BNFXEbH6siEDhiPAa0QsjWyEf3UuR69bgbRNdIUUhKW7V64NsgWciyFWypM008RA0QbyZ"
 );
-let informations;
+
+let reversedCard = false;
 
 const takeData = async () => {
   const info = await fetch("./src/data/data.json", {
@@ -11,22 +12,28 @@ const takeData = async () => {
     },
   });
   const data = await info.json();
-  informations = data;
-  building();
+  building(data);
 };
 takeData();
 
-const building = async () => {
-  const categories = await takeCategories(informations);
+const building = async (data) => {
+  const categories = await takeCategories(data);
   addOptions(categories);
   const main = document.querySelector("main");
 
-  categories.forEach((category) => {
-    const categoryElement = createCategoryCard(category);
-    // to be continue...
-  });
+  let i = 0;
+  while (i <= categories.length) {
+    data.forEach((eachData) => {
+      if (eachData.category === categories[i]) {
+        makeCard(eachData);
+      }
+    });
+    i++;
+  }
 
-  // const imageUrl = informations[0].imageURL;
+  // continue
+
+  // const imageUrl = data[0].imageURL;
   // main.innerHTML = `<img src='${imageUrl}' alt="Imagem qualquer" class="images" />`;
 };
 
@@ -55,8 +62,23 @@ const addOptions = (categories) => {
   });
 };
 
+const makeCard = (data) => {
+  const card = document.createElement("div");
+  card.classList.add("card");
+  card.innerHTML = `
+  <img src="${data.imageURL}" alt="clothing image"/>
+    <div class="textContainer">
+      <p>${data.description}</p>
+      <p>${data.size}</p>
+      <p>${data.price}</p>
+      <a href="${data.buyingLink}">Buy</a>
+    </div>
+  `;
+  document.querySelector("main").appendChild(card);
+};
+
 // interactable functions
 const filter = () => {
   const inputStr = document.querySelector("#filterStr").value;
-  console.log(inputStr);
+  alert(inputStr);
 };
