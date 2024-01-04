@@ -23,18 +23,23 @@ const building = async (data) => {
 
   let i = 0;
   while (i <= categories.length) {
+    if (categories[i] !== undefined) {
+      const title = document.createElement("h1");
+      title.classList.add("title");
+      title.textContent = categories[i];
+      main.appendChild(title);
+    }
     data.forEach((eachData) => {
       if (eachData.category === categories[i]) {
         makeCard(eachData);
       }
     });
+
     i++;
+    console.log(categories[i]);
   }
 
   // continue
-
-  // const imageUrl = data[0].imageURL;
-  // main.innerHTML = `<img src='${imageUrl}' alt="Imagem qualquer" class="images" />`;
 };
 
 const takeCategories = async (array) => {
